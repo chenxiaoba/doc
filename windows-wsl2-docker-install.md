@@ -36,10 +36,15 @@ $ wsl --set-default-version 2
 Enable integration with additional distros:
 將Ubuntu-20.04勾選後點選Apply&Restart
 
-7. 限制記憶體
-reference
-https://docs.microsoft.com/zh-tw/windows/wsl/wsl-config
-https://blog.csdn.net/fengke549015/article/details/106397903
+
+#### 額外設定:
+
+1. 限制記憶體
+
+    reference
+    
+    https://docs.microsoft.com/zh-tw/windows/wsl/wsl-config
+    https://blog.csdn.net/fengke549015/article/details/106397903
 ```
 $ sudo vim /etc/wsl.conf
 [wsl2]
