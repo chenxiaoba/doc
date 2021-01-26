@@ -1,8 +1,12 @@
 # windows10 2004 wsl2 docker
 
 
-### reference
+#### reference
 https://medium.com/@roccqqck/%E5%AE%89%E8%A3%9Dwsl2-%E8%88%87-docker-3e6403f0894e
+
+---
+
+#### 步驟
 
 1. 先更先windows到2004的版本(要等一陣子)
 2. 以系統管理員身分執行powershell
@@ -45,8 +49,15 @@ localhostForwarding=true
 $wsl --shutdown // 重開機
 ```
 
-8. elasticsearch 開不起來時
-: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+
+
+#### 常見問題:
+1. max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144] (e.g. elasticsearch 開不起來時)
 ```
 sysctl -w vm.max_map_count=262144
+```
+2. 在 powershell 輸入 wsl 後發現目錄沒有 mount 到 c 槽時, 可以重開 wsl
+```
+$ wsl --shutdown
+$ wsl
 ```
